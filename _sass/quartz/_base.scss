@@ -1,0 +1,166 @@
+/**
+ * Some base settings for common tags
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--body-color);
+  background-color: var(--body-bg);
+  font-family: var(--body-font);
+  font-size: var(--body-font-size);
+  line-height: var(--line-height);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--title-font);
+}
+
+a {
+  color: var(--accent-color);
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
+  }
+}
+
+figure {
+  margin: 0;
+}
+
+figcaption {
+  font-size: .8em;
+}
+
+article img {
+  display: block;
+  max-width: 100%;
+  margin: 1em 0;
+  border-radius: .5em;
+}
+
+blockquote {
+  border-left: .2em solid var(--body-color-light);
+  padding-left: var(--spacing);
+  margin-left: 0;
+  margin-right: 0;
+  font-style: italic;
+
+  i, em {
+    font-style: normal;
+  }
+}
+
+ul, ol {
+  padding-left: calc(2 * var(--spacing));
+  margin: var(--spacing) 0;
+}
+
+li {
+  ul, ol {
+    margin: 0;
+  }
+
+  > p {
+    margin-top: 0;
+  }
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: var(--spacing) 0;
+}
+
+td, th {
+  padding: .25em .5em;
+  border-bottom: 1px solid var(--body-color-light);
+}
+
+thead th {
+  border-bottom-color: currentColor;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--body-color-light);
+}
+
+code, pre {
+  font-family: var(--code-font);
+  font-size: .9em;
+}
+
+code {
+  padding: .1em .25em;
+  background-color: var(--body-fg);
+  border-radius: .5em;
+}
+
+pre {
+  overflow: auto;
+  padding: 1em;
+  margin: 1em 0;
+
+  code {
+    padding: 0;
+    background-color: inherit;
+  }
+}
+
+.highlight {
+  border-radius: .5em;
+  background-color: var(--body-fg);
+}
+
+.rouge-table {
+  border: 0;
+  margin: 0;
+
+  td,
+  th {
+    border: 0;
+    padding: 0;
+  }
+
+  pre {
+    padding: 0;
+    margin: 0;
+  }
+
+  .gutter {
+    user-select: none;
+    opacity: .5;
+    padding-right: 1em;
+  }
+}
+
+a[href^="#fn:"],
+a[href^="#fnref:"] {
+  display: inline-block;
+  margin-left: .1em;
+  font-weight: bold;
+}
+
+// List of footnotes
+.footnotes {
+  font-size: .8em;
+}
+
+#markdown-toc {
+  font-size: .8em;
+  padding: 2em 3em;
+  margin: 2em 0;
+  border: solid var(--body-color-light);
+  border-width: 1px 0;
+
+  &::before {
+    display: block;
+    margin-left: -3em;
+    content: "TOC";
+  }
+}
