@@ -70,13 +70,13 @@
   }
 }
 
-@media screen and (min-width: $screen-laptop) {
+@media screen and (min-width: $screen-tablet) {
   .site-header-content {
     padding: calc(var(--spacing) * 6) 0;
   }
 }
 
-@media screen and (min-width: $screen-desktop) {
+@media screen and (min-width: $screen-laptop) {
   .site-header-content {
     padding: calc(var(--spacing) * 8) 0;
   }

@@ -27,6 +27,9 @@ $screen-desktop: 1024px;
   --header-color:      var(--oc-white);
   --header-color-dark: var(--oc-gray-4);
   --header-bg:         var(--oc-black);
+
+  --post-card-shadow:        rgba(39, 44, 49, 0.06) 8px 14px 38px, rgba(39, 44, 49, 0.03) 1px 3px 8px;
+  --post-card-hover-shadow:  0 0 1px rgba(39, 44, 49, 0.10), 0 3px 16px rgba(39, 44, 49, 0.07);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -38,6 +41,9 @@ $screen-desktop: 1024px;
     --body-color-dark:  var(--oc-white);
     --accent-color:     var(--oc-blue-3);
     --message-color:    var(--oc-green-3);
+
+    --post-card-shadow:  rgba(181, 205, 228, 0.06) 8px 14px 38px, rgba(181, 205, 228, 0.03) 1px 3px 8px;
+    --post-card-shadow:  0 0 1px rgba(181, 205, 228, 0.10), 0 3px 16px rgba(181, 205, 228, 0.07);
   }
 }
 
