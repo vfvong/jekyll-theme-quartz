@@ -1,5 +1,20 @@
-<header class="header outer">
-  <div class="inner">
-    The header
+{% assign cover = site.cover %}
+{% if page.cover %}
+  {% assign cover = page.cover %}
+{% endif %}
+<header class="site-header"{% if cover %} style="background-image: url({{ cover | relative_url }})"{% endif %}>
+  <div class="site-header-shield">
+    <div class="outer">
+      <div class="inner">
+        <div class="site-header-content">
+          <h2 class="site-title">
+            <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+          </h2>
+          {% if site.tagline %}
+            <h5 class="site-tagline">{{ site.tagline }}</h5>
+          {% endif %}
+        </div>
+      </div>
+    </div>
   </div>
 </header>

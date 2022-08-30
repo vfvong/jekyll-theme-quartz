@@ -1,0 +1,46 @@
+.site-header {
+  color: var(--header-color);
+  background: var(--header-bg) no-repeat center center;
+  background-size: cover;
+}
+
+.site-header-shield {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.2);
+}
+
+.site-header-content {
+  text-align: center;
+  padding: calc(var(--spacing) * 4) 0;
+}
+
+.site-title {
+  margin: 0;
+
+  a {
+    color: inherit;
+
+    &:hover,
+    &:focus {
+      text-decoration: none;
+    }
+  }
+}
+
+.site-tagline {
+  margin: 0;
+  opacity: 0.8;
+}
+
+@media screen and (min-width: $screen-laptop) {
+  .site-header-content {
+    padding: calc(var(--spacing) * 6) 0;
+  }
+}
+
+@media screen and (min-width: $screen-desktop) {
+  .site-header-content {
+    padding: calc(var(--spacing) * 8) 0;
+  }
+}
