@@ -1,0 +1,40 @@
+.footer {
+  text-align: center;
+  font-size: .8em;
+  color: var(--header-color-dark);
+  background-color: var(--header-bg);
+  margin-top: auto;
+  padding-bottom: calc(var(--spacing) * 3);
+}
+
+.social a {
+  color: inherit;
+  margin-left: var(--spacing);
+  margin-right: var(--spacing);
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: var(--header-color);
+  }
+}
+
+.column {
+  margin: var(--spacing) 0;
+}
+
+@media screen and (min-width: $screen-laptop) {
+  .footer {
+    text-align: left;
+
+    .columns {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--spacing);
+    }
+  }
+
+  .social a {
+    margin-left: 0;
+  }
+}
