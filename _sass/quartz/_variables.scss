@@ -24,8 +24,9 @@ $screen-desktop: 1024px;
   --line-height:      1.5;
   --body-font-size:   16px;
 
-  --header-color:     var(--oc-white);
-  --header-bg:        var(--oc-black);
+  --header-color:      var(--oc-white);
+  --header-color-dark: var(--oc-gray-4);
+  --header-bg:         var(--oc-black);
 }
 
 @media (prefers-color-scheme: dark) {

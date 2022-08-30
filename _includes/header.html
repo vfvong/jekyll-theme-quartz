@@ -14,6 +14,15 @@
             <h5 class="site-tagline">{{ site.tagline }}</h5>
           {% endif %}
         </div>
+        {% if site.data.navigation %}
+          <nav class="nav">
+            {% for item in site.data.navigation %}
+              <a class="nav-item {% if page.url == item.url %}active{% endif %}" href="{{ item.url | relative_url }}">
+                {{ item.title }}
+              </a>
+            {% endfor %}
+          </nav>
+        {% endif %}
       </div>
     </div>
   </div>

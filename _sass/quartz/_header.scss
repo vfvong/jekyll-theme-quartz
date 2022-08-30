@@ -7,7 +7,7 @@
 .site-header-shield {
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.2);
+  background-color: rgba(0,0,0,0.3);
 }
 
 .site-header-content {
@@ -33,6 +33,27 @@
   opacity: 0.8;
 }
 
+.nav {
+  padding: calc(var(--spacing) * 2) 0;
+  font-weight: bold;
+  font-size: .8em;
+
+  .active {
+    color: var(--header-color);
+  }
+}
+
+.nav-item {
+  margin-right: var(--spacing);
+  color: var(--header-color-dark);
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: var(--header-color);
+  }
+}
+
 @media screen and (min-width: $screen-laptop) {
   .site-header-content {
     padding: calc(var(--spacing) * 6) 0;
@@ -42,5 +63,10 @@
 @media screen and (min-width: $screen-desktop) {
   .site-header-content {
     padding: calc(var(--spacing) * 8) 0;
+  }
+
+  .nav {
+    position: relative;
+    top: -70px;
   }
 }
