@@ -1,0 +1,16 @@
+.page-title {
+  text-align: center;
+  padding: var(--spacing) 0;
+}
+
+@media screen and (min-width: $screen-laptop) {
+  .page-content {
+    padding: 0 calc(var(--spacing) * 2);
+  }
+}
+
+@media screen and (min-width: $screen-desktop) {
+  .page-content {
+    padding: 0 calc(var(--spacing) * 4);
+  }
+}

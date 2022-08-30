@@ -17,14 +17,14 @@
 
 .site-title {
   margin: 0;
+}
 
-  a {
-    color: inherit;
+.site-title a {
+  color: inherit;
 
-    &:hover,
-    &:focus {
-      text-decoration: none;
-    }
+  &:hover,
+  &:focus {
+    text-decoration: none;
   }
 }
 
@@ -54,6 +54,22 @@
   }
 }
 
+.site-header-small-content {
+  display: flex;
+
+  .site-title {
+    padding: var(--spacing) 0;
+    margin-right: var(--spacing);
+  }
+
+  .nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing) 0;
+  }
+}
+
 @media screen and (min-width: $screen-laptop) {
   .site-header-content {
     padding: calc(var(--spacing) * 6) 0;
@@ -65,7 +81,7 @@
     padding: calc(var(--spacing) * 8) 0;
   }
 
-  .nav {
+  .large-header .nav {
     position: relative;
     top: -70px;
   }

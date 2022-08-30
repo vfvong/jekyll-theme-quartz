@@ -1,0 +1,18 @@
+<header class="site-header outer">
+  <div class="inner">
+    <div class="site-header-small-content">
+      <h4 class="site-title">
+        <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      </h4>
+      {% if site.data.navigation %}
+        <nav class="nav">
+          {% for item in site.data.navigation %}
+            <a class="nav-item {% if page.url == item.url %}active{% endif %}" href="{{ item.url | relative_url }}">
+              {{ item.title }}
+            </a>
+          {% endfor %}
+        </nav>
+      {% endif %}
+    </div>
+  </div>
+</header>
