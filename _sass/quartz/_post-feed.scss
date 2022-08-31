@@ -14,7 +14,7 @@
   min-height: 300px;
   background: var(--body-fg) center center;
   background-size: cover;
-  border-radius: .3em;
+  border-radius: var(--border-radius);
   box-shadow: var(--post-card-shadow);
   transition: all 0.5s ease;
 }
@@ -29,7 +29,7 @@
   position: relative;
   display: block;
   overflow: hidden;
-  border-radius: .3em .3em 0 0;
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
 }
 
 .post-card-image {
@@ -90,7 +90,7 @@
     .post-card-image-link {
       position: relative;
       flex: 1 1 auto;
-      border-radius: .3em 0 0 .3em;
+      border-radius: var(--border-radius) 0 0 var(--border-radius);
     }
   
     .post-card-image {
