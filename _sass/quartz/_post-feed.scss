@@ -60,7 +60,7 @@
 .post-card-categories {
   font-size: .8em;
   font-weight: bold;
-  opacity: 0.8;
+  color: var(--body-color-light);
 }
 
 .post-card-title {
@@ -70,7 +70,7 @@
 .post-card-meta {
   font-size: .8em;
   font-weight: bold;
-  opacity: 0.8;
+  color: var(--body-color-light);
   padding: 0 var(--spacing) var(--spacing);
 }
 
@@ -99,7 +99,7 @@
       height: 100%;
     }
 
-    .post-card-content {
+    .post-card-content:not(.no-cover) {
       flex: 0 1 357px;
     }
   }

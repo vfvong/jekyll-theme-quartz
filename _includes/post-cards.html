@@ -9,7 +9,7 @@
         <div class="post-card-image" style="background-image: url({{  post.cover | relative_url }})"></div>
       </a>
     {% endif %}
-    <div class="post-card-content">
+    <div class="post-card-content{% unless post.cover %}no-cover{% endunless %}">
       <a class="post-card-content-link" href="{{ post.url | relative_url }}">
         <header class="post-card-header">
           {% if post.categories.size > 0 %}
@@ -35,7 +35,7 @@
         </section>
       </a>
       <footer class="post-card-meta">
-        <time class="post-meta" datetime="{{ post.date | date_to_xmlschema }}">
+        <time datetime="{{ post.date | date_to_xmlschema }}">
           <i class="fa-solid fa-calendar-days"></i> {{ post.date | date_to_string }}
         </time>
       </footer>
