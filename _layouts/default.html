@@ -6,7 +6,7 @@
   <body>
     <div class="wrapper">
 
-      {% if page.layout == "page" %}
+      {% if page.layout == "page" or page.layout == "post" %}
         {% include header-small.html %}
       {% else %}
         {% include header.html %}
