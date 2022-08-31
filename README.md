@@ -4,7 +4,7 @@ Quartz is a crystalline Jekyll theme for blog.
 
 Check the [demo](http://vfvong.blog/jekyll-theme-quartz/).
 
-![screenshot](screenshot.jpg)
+![screenshot](screenshot.png)
 
 ## Highlight Features <!-- omit in toc -->
 
