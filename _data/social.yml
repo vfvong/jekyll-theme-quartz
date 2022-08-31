@@ -1,0 +1,9 @@
+- title: Email
+  url: mailto:vfvong@gmail.com
+  icon: fas fa-envelope
+- title: Twitter
+  url: https://twitter.com/vfvong
+  icon: fab fa-twitter
+- title: GitHub
+  url: https://github.com/vfvong
+  icon: fab fa-github
