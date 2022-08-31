@@ -1,0 +1,11 @@
+---
+layout: page
+---
+
+{{ content }}
+
+{% if page.type == "years" %}
+  {% include archive-by-years.html %}
+{% else %}
+  {% include archive-by-tagories.html %}
+{% endif %}

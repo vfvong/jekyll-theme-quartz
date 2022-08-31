@@ -1,0 +1,37 @@
+/**
+ * Styles for the archive pages
+ */
+
+.taxonomies {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing);
+  margin-top: calc(2 * var(--spacing));
+  margin-bottom: calc(2 * var(--spacing));
+}
+
+.taxonomy {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid var(--body-color-light);
+  font-weight: bold;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: var(--body-color-dark);
+  }
+}
+
+.archive-date {
+  font-family: var(--code-font);
+}
+
+@media screen and (min-width: $screen-laptop) {
+  .taxonomies {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

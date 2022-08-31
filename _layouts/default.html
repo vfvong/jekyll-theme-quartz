@@ -6,10 +6,10 @@
   <body>
     <div class="wrapper">
 
-      {% if page.layout == "page" or page.layout == "post" %}
-        {% include header-small.html %}
-      {% else %}
+      {% if page.layout == "default" or page.layout == "home" %}
         {% include header.html %}
+      {% else %}
+        {% include header-small.html %}
       {% endif %}
 
       <main class="main outer">
