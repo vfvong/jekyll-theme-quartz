@@ -81,3 +81,9 @@ layout: default
     <span class="next post-next unable"><i class="fas fa-chevron-right"></i></span>
   {% endif %}
 </aside>
+
+{% if jekyll.environment == "production" and site.disqus and page.comments != false %}
+  <aside class="post-comments">
+    {% include disqus.html %}
+  </aside>
+{% endif %}

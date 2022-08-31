@@ -1,0 +1,21 @@
+.post-comments {
+  margin: var(--spacing) 0;
+}
+
+@media screen and (min-width: $screen-tablet) {
+  .post-comments {
+    padding: 0 var(--spacing);
+  }
+}
+
+@media screen and (min-width: $screen-laptop) {
+  .post-comments {
+    padding: 0 calc(var(--spacing) * 4);
+  }
+}
+
+@media screen and (min-width: $screen-desktop) {
+  .post-comments {
+    padding: 0 calc(var(--spacing) * 6);
+  }
+}
