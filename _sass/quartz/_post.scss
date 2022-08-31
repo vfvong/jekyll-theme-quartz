@@ -48,6 +48,13 @@ a.post-tag {
   min-height: 230px;
 }
 
+.message {
+  padding: var(--spacing);
+  border-radius: var(--border-radius);
+  background-color: var(--message-color);
+  color: var(--body-bg);
+}
+
 @media screen and (min-width: $screen-tablet) {
   .page,
   .post {
