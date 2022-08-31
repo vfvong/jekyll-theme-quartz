@@ -55,6 +55,11 @@
   .post-pagination {
     padding: 0 calc(var(--spacing) * 4);
   }
+
+  .pagination:not(.post-pagination) {
+    position: relative;
+    top: -70px;
+  }
 }
 
 @media screen and (min-width: $screen-desktop) {
