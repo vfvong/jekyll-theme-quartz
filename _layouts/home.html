@@ -5,3 +5,18 @@ layout: default
 <div class="post-feed">
   {% include post-cards.html %}
 </div>
+
+{% if paginator %}
+  <div class="pagination">
+    {% if paginator.previous_page %}
+      <a class="prev home-prev" href="{{ paginator.previous_page_path | relative_url }}"><i class="fas fa-chevron-left"></i></a>
+    {% else %}
+      <span class="prev home-prev unable"><i class="fas fa-chevron-left"></i></span>
+    {% endif %}
+    {% if paginator.next_page %}
+      <a class="next home-next" href="{{ paginator.next_page_path | relative_url }}"><i class="fas fa-chevron-right"></i></a>
+    {% else %}
+      <span class="next home-next unable"><i class="fas fa-chevron-right"></i></span>
+    {% endif %}
+  </div>
+{% endif %}

@@ -63,3 +63,21 @@ layout: default
     </nav>
   {% endif %}
 </article>
+
+<aside class="pagination post-pagination">
+  {% if page.previous %}
+    <a class="prev post-prev" href="{{ page.previous.url | relative_url }}">
+      <i class="fas fa-chevron-left"></i> <span class="">{{ page.previous.title | markdownify | strip_html }}</span>
+    </a>
+  {% else %}
+    <span class="prev post-prev unable"><i class="fas fa-chevron-left"></i></span>
+  {% endif %}
+  
+  {% if page.next %}
+    <a class="next post-next" href="{{ page.next.url | relative_url }}">
+      <span class="">{{ page.next.title | markdownify | strip_html }}</span> <i class="fas fa-chevron-right"></i> 
+    </a>
+  {% else %}
+    <span class="next post-next unable"><i class="fas fa-chevron-right"></i></span>
+  {% endif %}
+</aside>
