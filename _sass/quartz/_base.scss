@@ -164,3 +164,12 @@ a[href^="#fnref:"] {
     content: "TOC";
   }
 }
+
+.task-list {
+  list-style: none;
+  padding-left: 0;
+
+  .task-list-item-checkbox {
+    margin-right: .5em;
+  }
+}
