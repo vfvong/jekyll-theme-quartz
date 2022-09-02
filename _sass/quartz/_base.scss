@@ -43,6 +43,11 @@ article img {
   border-radius: var(--border-radius);
 }
 
+article img.emoji {
+  display: inline-block;
+  margin: 0 .2em;
+}
+
 blockquote {
   border-left: .2em solid var(--body-color-light);
   padding-left: var(--spacing);
@@ -169,7 +174,14 @@ a[href^="#fnref:"] {
   list-style: none;
   padding-left: 0;
 
+  .task-list-item {
+    display: flex;
+    align-items: center;
+  }
+
   .task-list-item-checkbox {
+    width: 1em;
+    height: 1em;
     margin-right: .5em;
   }
 }
