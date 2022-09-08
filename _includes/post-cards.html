@@ -4,12 +4,12 @@
 {% endif %}
 {% for post in posts %}
   <article class="post-card">
-    {% if post.cover %}
+    {% if post.image %}
       <a class="post-card-image-link" href="{{ post.url | relative_url }}">
-        <div class="post-card-image" style="background-image: url({{  post.cover | relative_url }})"></div>
+        <div class="post-card-image" style="background-image: url({{  post.image | relative_url }})"></div>
       </a>
     {% endif %}
-    <div class="post-card-content {% unless post.cover %}no-cover{% endunless %}">
+    <div class="post-card-content {% unless post.image %}no-cover{% endunless %}">
       <a class="post-card-content-link" href="{{ post.url | relative_url }}">
         <header class="post-card-header">
           {% if post.categories.size > 0 %}
