@@ -1,6 +1,6 @@
 {% assign cover = site.cover %}
-{% if page.cover %}
-  {% assign cover = page.cover %}
+{% if page.image %}
+  {% assign cover = page.image %}
 {% endif %}
 <header class="site-header large-header"{% if cover %} style="background-image: url({{ cover | relative_url }})"{% endif %}>
   <div class="site-header-shield">

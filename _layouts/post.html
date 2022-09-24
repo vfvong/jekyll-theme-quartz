@@ -40,8 +40,8 @@ layout: default
 
   <h1 class="post-title">{{ page.title }}</h1>
 
-  {% if page.cover %}
-    <figure class="post-cover" style="background-image: url({{ page.cover | relative_url }})">
+  {% if page.image %}
+    <figure class="post-cover" style="background-image: url({{ page.image | relative_url }})">
     </figure>
   {% endif %}
 

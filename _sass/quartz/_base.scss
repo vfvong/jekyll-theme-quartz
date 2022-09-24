@@ -46,6 +46,9 @@ article img {
 article img.emoji {
   display: inline-block;
   margin: 0 .2em;
+  height: 1em;
+  width: 1em;
+  vertical-align: middle;
 }
 
 blockquote {
@@ -174,14 +177,10 @@ a[href^="#fnref:"] {
   list-style: none;
   padding-left: 0;
 
-  .task-list-item {
-    display: flex;
-    align-items: center;
-  }
-
   .task-list-item-checkbox {
-    width: 1em;
-    height: 1em;
     margin-right: .5em;
+    height: 1em;
+    width: 1em;
+    vertical-align: middle;
   }
 }

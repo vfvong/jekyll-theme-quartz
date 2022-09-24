@@ -1,32 +1,42 @@
 <footer class="footer outer">
   <div class="inner">
     <div class="columns">
-      <p class="column">
-        &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>
-        {%- if site.author -%}
-          &nbsp;<a href="{{ site.author.url }}" target="_blank">{{ site.author.name }}</a>
-        {%- endif -%}. All rights reserved.
-      </p>
-  
-      <p class="column">
-        Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> & <a href="https://github.com/vfvong/jekyll-theme-quartz" target="_blank">Quartz</a>
-      </p>
-  
       {% if site.description %}
       <p class="column">
         {{ site.description }}
       </p>
       {% endif %}
 
-      {% if site.data.social %}
-      <div class="column social">
-        {% for social in site.data.social %}
-          <a href="{{ social.url }}" target="_blank">
-            <i class="{{ social.icon | default: 'fas fa-link' }}" title="{{ social.title }}"></i>
-          </a>
+      {% if site.data.footnav %}
+        {% for column in site.data.footnav %}
+          <nav class="column footnav">
+            {% for item in column %}
+              <a class="footnav-item" href="{{ item.url | relative_url }}">
+                {{ item.title }}
+              </a>
+            {% endfor %}
+          </nav>
         {% endfor %}
-      </div>
       {% endif %}
-    </div>      
+    </div>
+
+    <div class="footer-bottom">
+      {% if site.data.social %}
+        <div class="social">
+          {% for social in site.data.social %}
+            <a href="{{ social.url }}" target="_blank">
+              <i class="{{ social.icon | default: 'fas fa-link' }}" title="{{ social.title }}"></i>
+            </a>
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      <p class="copyright">
+        &copy; <time datetime="{{ site.time | date_to_xmlschema }}">{{ site.time | date: '%Y' }}</time>
+        {%- if site.author -%}
+          &nbsp;<a href="{{ site.author.url }}" target="_blank">{{ site.author.name }}</a>
+        {%- endif -%}. All rights reserved. Powered by <a href="https://jekyllrb.com/" target="_blank">Jekyll</a> & <a href="https://github.com/vfvong/jekyll-theme-quartz" target="_blank">Quartz</a>
+      </p>
+    </div>
   </div>
 </footer>
