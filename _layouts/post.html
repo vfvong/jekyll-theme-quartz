@@ -6,7 +6,7 @@ layout: default
   <div class="post-meta post-meta-top">
     <div>
       <time datetime="{{ page.date | date_to_xmlschema }}">
-        <i class="fa-solid fa-calendar-days"></i> {{ page.date | date_to_string }}
+        {{ page.date | date_to_string }}
       </time>
       {%- if page.last_modified_at -%}
         ~
@@ -15,27 +15,28 @@ layout: default
           {{ mdate | date_to_string }}
         </time>
       {%- endif -%}
+
       {%- if page.author -%}
-        <i class="fa-solid fa-at"></i> 
+        &bull;
         {% for author in page.author %}
           <span itemprop="author" itemscope itemtype="http://schema.org/Person">{{ author }}</span>
           {%- if forloop.last == false %}, {% endif -%}
         {% endfor %}
       {%- endif -%}
+
+      {% if page.categories.size > 0 %}
+        &bull;
+        <span class="post-categories">
+          {% for category in page.categories %}
+            {% if site.categories_path %}
+              <a class="post-category" href="{{ site.categories_path | relative_url }}#{{ category | slugify }}">{{ category }}</a> /
+            {% else %}
+              <span>{{ category }}</span> /
+            {% endif %}
+          {% endfor %}
+        </span>
+      {% endif %}
     </div>
-    
-    {% if page.categories.size > 0 %}
-      <nav class="post-categories">
-        <i class="fa-solid fa-folder"></i>
-        {% for category in page.categories %}
-          {% if site.categories_path %}
-            <a class="post-category" href="{{ site.categories_path | relative_url }}#{{ category | slugify }}">{{ category }}</a> /
-          {% else %}
-            <span>{{ category }}</span> /
-          {% endif %}
-        {% endfor %}
-      </nav>
-    {% endif %}
   </div>
 
   <h1 class="post-title">{{ page.title }}</h1>

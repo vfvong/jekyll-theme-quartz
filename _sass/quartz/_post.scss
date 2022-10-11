@@ -4,24 +4,23 @@
   padding: var(--spacing) 0;
 }
 
+.post-title {
+  margin-top: 0;
+  padding-top: 0;
+}
+
 .post-meta {
   color: var(--body-color-light);
   font-size: .8em;
-  margin-top: var(--spacing);
+  margin-top: calc(var(--spacing) * 4);
 }
 
 .post-meta-top {
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  gap: var(--spacing);
+  text-align: center;
 }
 
 .post-meta-bottom {
   margin-bottom: var(--spacing);
-}
-
-.post-categories {
-  text-align: right;
 }
 
 a.post-category {
