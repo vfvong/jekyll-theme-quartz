@@ -8,7 +8,7 @@
       {% endif %}
 
       {% if site.data.footnav %}
-        {% for column in site.data.footnav %}
+        {% for column in site.data.footnav limit:3 %}
           <nav class="column footnav">
             {% for item in column %}
               <a class="footnav-item" href="{{ item.url | relative_url }}">
