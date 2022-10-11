@@ -24,14 +24,30 @@
   text-align: right;
 }
 
-a.post-category,
-a.post-tag {
+a.post-category {
   color: inherit;
 
   &:hover,
   &:focus {
     text-decoration: none;
     color: var(--body-color-dark);
+  }
+}
+
+.post-tag {
+  background-color: var(--accent-color);
+  color: var(--body-bg);
+  padding: .2em .5em;
+  border-radius: var(--border-radius);
+  opacity: .7;
+}
+
+a.post-tag {
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    color: var(--body-fg);
+    opacity: 1;
   }
 }
 

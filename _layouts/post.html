@@ -51,13 +51,12 @@ layout: default
 
   {% if page.tags.size > 0 %}
     <nav class="post-meta post-meta-bottom">
-      <i class="fa-solid fa-tag"></i>
       {% for tag in page.tags %}
         {% assign slugified_tag = tag | slugify %}
         {% if site.tags_path %}
-          <a class="post-tag" href="{{ site.tags_path | relative_url }}#{{ slugified_tag }}">#{{ slugified_tag }}</a>
+          <a class="post-tag" href="{{ site.tags_path | relative_url }}#{{ slugified_tag }}">{{ slugified_tag }}</a>
         {% else %}
-          <span>#{{ slugified_tag }}</span>
+          <span class="post-tag">{{ slugified_tag }}</span>
         {% endif %}
       {% endfor %}
     </nav>
