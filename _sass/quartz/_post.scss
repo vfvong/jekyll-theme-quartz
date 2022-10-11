@@ -12,15 +12,15 @@
 .post-meta {
   color: var(--body-color-light);
   font-size: .8em;
-  margin-top: calc(var(--spacing) * 4);
 }
 
 .post-meta-top {
   text-align: center;
+  margin-top: calc(var(--spacing) * 4);
 }
 
 .post-meta-bottom {
-  margin-bottom: var(--spacing);
+  margin: var(--spacing) 0;
 }
 
 a.post-category {
