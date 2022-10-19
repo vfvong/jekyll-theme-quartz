@@ -29,10 +29,13 @@ layout: default
         <span class="post-categories">
           {% for category in page.categories %}
             {% if site.categories_path %}
-              <a class="post-category" href="{{ site.categories_path | relative_url }}#{{ category | slugify }}">{{ category }}</a> /
+              <a class="post-category" href="{{ site.categories_path | relative_url }}#{{ category | slugify }}">{{ category }}</a>
             {% else %}
-              <span>{{ category }}</span> /
+              <span>{{ category }}</span>
             {% endif %}
+            {% unless forloop.index == page.categories.size %}
+              <span> / </span>
+            {% endunless %}
           {% endfor %}
         </span>
       {% endif %}
